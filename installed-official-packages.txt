@@ -4,6 +4,7 @@ automake 1.16.2-3
 base 2-2
 binutils 2.35-2
 bison 3.6.4-1
+bluez-utils 5.55-1
 brave-bin 1:1.14.84-1
 chromium 85.0.4183.121-1
 discord 0.0.12-1
@@ -37,12 +38,11 @@ picom 8.1-1
 pkgconf 1.7.3-1
 playerctl 2.2.1-1
 pulseaudio 13.0-3
+pulseaudio-alsa 1:1.2.2-2
+pulseaudio-bluetooth 13.0-3
 sed 4.8-1
 sudo 1.9.3.p1-1
 telegram-desktop 2.3.2-2
 texinfo 6.7-3
 ttf-font-awesome 5.14.0-1
 vim 8.2.1704-1
-wget 1.20.3-3
-which 2.21-5
-xorg-server 1.20.9-2
