@@ -27,8 +27,8 @@ libreoffice-fresh-en-gb 7.0.1-1
 libtool 2.4.6+42+gb88cebd5-14
 libva-intel-driver 2.4.1-1
 libva-utils 2.9.1-1
-linux 5.8.12.arch1-1
-linux-firmware 20200817.7a30af1-1
+linux 5.8.13.arch1-1
+linux-firmware 20200916.00a84c5-1
 m4 1.4.18-3
 make 4.3-3
 nano 5.2-1
