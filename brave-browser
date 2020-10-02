@@ -1,0 +1,2 @@
+#!/bin/bash
+brave --use-gl=desktop --ignore-gpu-blacklist
