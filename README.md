@@ -11,12 +11,8 @@ with this paraneter
 then regenerate the config file with:
 ```grub-mkconfig -o /boot/grub/grub.cfg```
 
-Source: https://bbs.archlinux.org/viewtopic.php?id=224485
-
 ### Brave Video Acceleration
 launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
-
-Source: Valentino (thanks)
 
 ### Touchpad
 in ```/etc/X11/xorg.conf.d/50-synaptics.conf```
