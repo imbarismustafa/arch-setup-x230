@@ -12,7 +12,7 @@ then regenerate the config file with:
 ```grub-mkconfig -o /boot/grub/grub.cfg```
 
 ### Brave Video Acceleration
-launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
+install ```libva-intel-driver``` and launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
 
 ### Touchpad
 in ```/etc/X11/xorg.conf.d/50-synaptics.conf```
