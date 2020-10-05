@@ -9,9 +9,11 @@ brave-bin 1:1.14.84-1
 calibre 5.0.1-1
 chromium 85.0.4183.121-1
 discord 0.0.12-1
+dkms 2.8.3-1
 fakeroot 1.24-2
 file 5.39-1
 findutils 4.7.0-2
+firefox 81.0.1-1
 flex 2.6.4-3
 gawk 5.1.0-1
 gcc 10.2.0-3
