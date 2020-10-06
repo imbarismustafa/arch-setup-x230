@@ -83,4 +83,6 @@ hwmon /sys/class/thermal/thermal_zone0/temp
 
 ### Kernel
 in ```/etc/mkinitcpio.conf```, add ```MODULES="i915"```. Regenerate initram image with ```sudo mkinitcpio -p linux```.
+### Dual Screen
+` xrandr --output LVDS-1 --auto --output HDMI-1 --above LVDS-1`
 
