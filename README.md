@@ -88,10 +88,12 @@ in ```/etc/mkinitcpio.conf```, add ```MODULES="i915"```. Regenerate initram imag
 
 ### GRUB Background
 
-### Backlight Control
 inside
+
 ```/etc/default/grub```
+
 append 
 ```GRUB_BACKGROUND="path_to_png```
+
 then regenerate the config file with:
 ```grub-mkconfig -o /boot/grub/grub.cfg```
