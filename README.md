@@ -8,7 +8,7 @@ inside
 append 
 ```GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi='!Windows 2012'"```
 
-then regenerate the config file with:
+then regenerate the config file with
 ```grub-mkconfig -o /boot/grub/grub.cfg```
 
 ### Brave Video Acceleration
@@ -95,5 +95,5 @@ inside
 append 
 ```GRUB_BACKGROUND="path_to_png```
 
-then regenerate the config file with:
+then regenerate the config file with
 ```grub-mkconfig -o /boot/grub/grub.cfg```
