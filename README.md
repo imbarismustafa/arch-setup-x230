@@ -49,6 +49,16 @@ EndSection
 ```
 
 ### Power Saving
+
+#### TLP
+install tlp with ```sudo pacman -S tlp```
+
+enable startup
+```systemctl enable tlp.service```
+
+run tlp
+```systemctl start tlp.service```
+
 in ```/etc/default/tlp```
 add the following:
 
@@ -58,12 +68,12 @@ STOP_CHARGE_THRESH_BAT0=100
 ```
 
 ### Charge thresholds
-install ```tpacpi-bar```
 
 ```
 # echo 40 > /sys/class/power_supply/BAT0/charge_start_threshold
 # echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
 ```
+Note: after battery removal, default value will be loaded.
 
 ### Fan control
 install AUR ```thinkfan``` and configure ```/etc/thinkfan.conf``` with:
@@ -83,11 +93,11 @@ hwmon /sys/class/thermal/thermal_zone0/temp
 
 ### Kernel
 in ```/etc/mkinitcpio.conf```, add ```MODULES="i915"```. Regenerate initram image with ```sudo mkinitcpio -p linux```.
+
 ### Dual Screen
 ` xrandr --output LVDS-1 --auto --output HDMI-1 --above LVDS-1`
 
 ### GRUB Background
-
 inside
 
 ```/etc/default/grub```
