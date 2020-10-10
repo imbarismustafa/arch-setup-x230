@@ -99,7 +99,6 @@ in ```/etc/mkinitcpio.conf```, add ```MODULES="i915"```. Regenerate initram imag
 
 ### GRUB Background
 inside
-
 ```/etc/default/grub```
 
 append 
