@@ -102,7 +102,7 @@ inside
 ```/etc/default/grub```
 
 append 
-```GRUB_BACKGROUND="path_to_png```
+```GRUB_BACKGROUND="path_to_png"```
 
 then regenerate the config file with
 ```grub-mkconfig -o /boot/grub/grub.cfg```
