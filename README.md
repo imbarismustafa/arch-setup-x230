@@ -86,3 +86,12 @@ in ```/etc/mkinitcpio.conf```, add ```MODULES="i915"```. Regenerate initram imag
 ### Dual Screen
 ` xrandr --output LVDS-1 --auto --output HDMI-1 --above LVDS-1`
 
+### GRUB Background
+
+### Backlight Control
+inside
+```/etc/default/grub```
+append 
+```GRUB_BACKGROUND="path_to_png```
+then regenerate the config file with:
+```grub-mkconfig -o /boot/grub/grub.cfg```
