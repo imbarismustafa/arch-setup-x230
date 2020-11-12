@@ -14,6 +14,8 @@ then regenerate the config file with
 ### Brave Video Acceleration
 install ```libva-intel-driver``` and launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
 
+then add ```h264ify``` extension to brave
+
 ### Touchpad
 in ```/etc/X11/xorg.conf.d/50-synaptics.conf```
 add the following:
