@@ -37,6 +37,44 @@ IdleActionSec=30min
 to apply any changes signal ```systemd-logind``` with ```HUP```
 ```systemctl kill -s HUP systemd-logind```
 
+to hibernate on low battery level make sure to have ```acpi``` installed and append 
+```
+# Suspend the system when battery level drops to 8% or lower
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-8]", RUN+="/usr/bin/systemctl hibernate"
+```
+
+to
+```/etc/udev/rules.d/99-lowbat.rules```
+
+testing events: one way to test udev rules is to have them create a file when they are run. 
+
+to 
+```/etc/udev/rules.d/98-discharging.rules```
+
+apppend
+```SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", RUN+="/usr/bin/touch /home/example/discharging"```
+
+This creates a file at 
+```/home/example/discharging``` 
+when the laptop charger is unplugged
+
+Hybrid-sleep on suspend or hibernation request
+
+It is possible to configure systemd to always do a hybrid-sleep even on a suspend or hibernation request.
+
+The default suspend and hibernation action can be configured in the ```/etc/systemd/sleep.conf``` file. To set both actions to hybrid-sleep, append
+
+```
+[Sleep]
+# suspend=hybrid-sleep
+SuspendMode=suspend
+SuspendState=disk
+# hibernate=hybrid-sleep
+HibernateMode=suspend
+HibernateState=disk
+```
+
+to ```/etc/systemd/sleep.conf```
 
 ### Brave Video Acceleration
 install ```libva-intel-driver``` and launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
