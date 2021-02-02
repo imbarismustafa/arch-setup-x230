@@ -11,6 +11,33 @@ append
 then regenerate the config file with
 ```grub-mkconfig -o /boot/grub/grub.cfg```
 
+### Hibernation
+inside
+```/etc/default/grub```
+
+append 
+```GRUB_CMDLINE_LINUX="resume=/dev/sdXX"```
+(sdXX = SWAP)
+
+then regenerate the config file with
+```grub-mkconfig -o /boot/grub/grub.cfg```
+
+edit how systemd handles sleep and hibernation with
+```sudo $EDITOR /etc/systemd/logind.conf```
+
+append
+
+```
+HandleLidSwitch=suspend
+HandleLidSwitchDocked=ignore
+HandleLidSwitchExternalPower=HandleLidSwitch
+IdleAction=suspend
+IdleActionSec=30min
+```
+to apply any changes signal ```systemd-logind``` with ```HUP```
+```systemctl kill -s HUP systemd-logind```
+
+
 ### Brave Video Acceleration
 install ```libva-intel-driver``` and launch brave with ``` --use-gl=desktop``` and ```--ignore-gpu-blacklist```
 
