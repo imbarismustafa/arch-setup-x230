@@ -171,3 +171,6 @@ append
 
 then regenerate the config file with
 ```grub-mkconfig -o /boot/grub/grub.cfg```
+
+### Broadcom Bluetooth firmware for Linux kernel
+```yay -S broadcom-bt-firmware-git```
