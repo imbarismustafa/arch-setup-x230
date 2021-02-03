@@ -31,8 +31,6 @@ append
 HandleLidSwitch=suspend
 HandleLidSwitchDocked=ignore
 HandleLidSwitchExternalPower=HandleLidSwitch
-IdleAction=suspend
-IdleActionSec=30min
 ```
 to apply any changes signal ```systemd-logind``` with ```HUP```
 ```systemctl kill -s HUP systemd-logind```
